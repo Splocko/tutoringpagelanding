@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Target, BookOpen, Sparkles, Trophy, MapPin, Download, Play, Star } from "lucide-react"
 import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -84,17 +85,35 @@ export default function UnmessdLanding() {
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center gradient-bg pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-gradient-to-r from-purple-500/25 to-pink-500/25 rounded-full blur-2xl animate-pulse delay-1000" />
-          <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
-          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/35 to-blue-500/35 rounded-full blur-xl animate-pulse delay-500" />
+          <div
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse"
+            style={{ animationDuration: "1.5s" }}
+          />
+          <div
+            className="absolute top-1/3 right-1/3 w-80 h-80 bg-gradient-to-r from-purple-500/25 to-pink-500/25 rounded-full blur-2xl animate-pulse delay-500"
+            style={{ animationDuration: "1.8s" }}
+          />
+          <div
+            className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse delay-1000"
+            style={{ animationDuration: "2s" }}
+          />
+          <div
+            className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/35 to-blue-500/35 rounded-full blur-xl animate-pulse delay-300"
+            style={{ animationDuration: "1.6s" }}
+          />
 
           <div
             className="absolute top-20 left-1/2 w-32 h-32 bg-purple-400/20 rounded-full blur-lg animate-bounce"
-            style={{ animationDuration: "3s" }}
+            style={{ animationDuration: "2s" }}
           />
-          <div className="absolute bottom-20 right-1/3 w-48 h-48 bg-blue-400/15 rounded-full blur-2xl animate-pulse delay-3000" />
-          <div className="absolute top-2/3 left-20 w-24 h-24 bg-indigo-500/25 rounded-full blur-md animate-pulse delay-1500" />
+          <div
+            className="absolute bottom-20 right-1/3 w-48 h-48 bg-blue-400/15 rounded-full blur-2xl animate-pulse delay-1500"
+            style={{ animationDuration: "1.7s" }}
+          />
+          <div
+            className="absolute top-2/3 left-20 w-24 h-24 bg-indigo-500/25 rounded-full blur-md animate-pulse delay-800"
+            style={{ animationDuration: "1.4s" }}
+          />
         </div>
 
         <div className="absolute inset-0 bg-black/10" />
@@ -222,8 +241,8 @@ export default function UnmessdLanding() {
             >
               <div className="relative max-w-sm mx-auto">
                 <img
-                  src="/voice-transcription-calendar.png"
-                  alt="AI Voice Assistant Demo"
+                  src="https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/UNMESSD%20HOME%20PAGE-kDh9qNt0PzEN9m0XzBGiBCDBnDJM8S"
+                  alt="unmessd App Home Page Screenshot"
                   className="w-full h-auto rounded-3xl shadow-2xl"
                 />
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-ping" />
@@ -319,6 +338,9 @@ export default function UnmessdLanding() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer Component */}
+      <Footer />
     </div>
   )
 }

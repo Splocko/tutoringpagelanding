@@ -20,6 +20,34 @@ export const metadata: Metadata = {
   description:
     "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
   generator: "v0.app",
+  openGraph: {
+    title: "unmessd - Find your focus. Organize your world.",
+    description:
+      "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
+    url: "https://unmessd.com",
+    siteName: "unmessd",
+    images: [
+      {
+        url: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
+        width: 1200,
+        height: 630,
+        alt: "unmessd - Productivity App",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "unmessd - Find your focus. Organize your world.",
+    description:
+      "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
+    images: ["https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd"],
+  },
+  icons: {
+    icon: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
+    apple: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
+  },
 }
 
 export default function RootLayout({
