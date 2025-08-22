@@ -40,6 +40,10 @@ export default function Footer() {
                 When not coding, you'll find him exploring new technologies, drinking way too much coffee, and dreaming
                 up the next big thing that'll make life a little less messy for everyone.
               </p>
+              <p className="text-foreground/60 text-sm">
+                Note: not all information in this website is 100% accurate, sample data to fill in the website may be
+                used until I have real data!
+              </p>
             </div>
           </motion.div>
 
