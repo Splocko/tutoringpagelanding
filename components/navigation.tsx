@@ -43,11 +43,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             className="font-bold text-xl font-serif text-primary flex items-center flex-shrink-0"
           >
-            <img
-              src="https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd"
-              alt="unmessd logo"
-              className="h-8 w-8 mr-2"
-            />
+            <img src="/unmessd-app-icon.jpg" alt="unmessd logo" className="h-8 w-8 mr-2 rounded-lg" />
             unmessd
           </motion.div>
 

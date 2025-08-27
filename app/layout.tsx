@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "unmessd",
     images: [
       {
-        url: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
+        url: "/unmessd-app-icon.jpg",
         width: 1200,
         height: 630,
         alt: "unmessd - Productivity App",
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
     title: "unmessd - Find your focus. Organize your world.",
     description:
       "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
-    images: ["https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd"],
+    images: ["/unmessd-app-icon.jpg"],
   },
   icons: {
-    icon: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
-    apple: "https://8f3riwpkblxtrplf.public.blob.vercel-storage.com/unmessd",
+    icon: "/unmessd-app-icon.jpg",
+    apple: "/unmessd-app-icon.jpg",
   },
 }
 
