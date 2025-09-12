@@ -20,7 +20,7 @@ export default function Navigation() {
   const navItems = [
     { name: "Features", href: "#features" },
     { name: "AI Assistant", href: "#ai" },
-    
+    { name: "Testimonials", href: "#testimonials" },
     { name: "Download", href: "#download" },
   ]
 

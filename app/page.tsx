@@ -55,6 +55,27 @@ const features = [
   },
 ]
 
+const testimonials = [
+  {
+    quote: "unmessd transformed how I manage my day. The AI voice feature is incredible!",
+    name: "Sarah Chen",
+    title: "Designer",
+    avatar: "/professional-woman-avatar.png",
+  },
+  {
+    quote: "Finally, a productivity app that doesn't overwhelm me. Clean, intuitive, perfect.",
+    name: "Marcus Rodriguez",
+    title: "Founder",
+    avatar: "/professional-man-avatar.png",
+  },
+  {
+    quote: "The habit tracking with progress rings keeps me motivated every single day.",
+    name: "Emma Thompson",
+    title: "Student",
+    avatar: "/young-woman-student-avatar.png",
+  },
+]
+
 export default function UnmessdLanding() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -229,6 +250,55 @@ export default function UnmessdLanding() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6">Loved by busy people everywhere</h2>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: false, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {testimonials.map((testimonial, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="p-8 h-full bg-card/50 backdrop-blur-sm border-border/50">
+                  <div className="space-y-6">
+                    <div className="flex text-primary">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-current" />
+                      ))}
+                    </div>
+                    <blockquote className="text-lg leading-relaxed">"{testimonial.quote}"</blockquote>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={testimonial.avatar || "/placeholder.svg"}
+                        alt={testimonial.name}
+                        className="w-12 h-12 rounded-full"
+                      />
+                      <div>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-sm text-muted-foreground">{testimonial.title}</div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
