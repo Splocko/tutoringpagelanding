@@ -44,7 +44,7 @@ export default function Navigation({
           <motion.div
             className={`flex items-center justify-between transition-all duration-300 ease-out ${
               isScrolled
-                ? "h-14 bg-background/95 backdrop-blur-xl border border-border/40 rounded-full px-8 shadow-2xl shadow-primary/40 glow-effect"
+                ? "h-14 bg-background/95 backdrop-blur-xl border border-border/40 rounded-full px-8 shadow-2xl shadow-primary/20 glow-effect"
                 : "h-16 bg-background/90 backdrop-blur-md px-6"
             }`}
             transition={{ duration: 0.3, ease: "easeOut" }}
@@ -129,7 +129,7 @@ export default function Navigation({
           exit={{ opacity: 0, y: -50 }}
           className="bg-primary text-primary-foreground text-center py-3 px-4 relative mt-16 z-40"
         >
-          <p className="text-sm font-medium">✨ LIMITED TIME ⏰: FIRST TASTER SESSION FREE. CONTACT ME</p>
+          <p className="text-sm font-medium">✨ Limited time: First taster session free. Contact me</p>
           <button
             onClick={() => setIsBannerVisible(false)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-primary-foreground/80 hover:text-primary-foreground"
