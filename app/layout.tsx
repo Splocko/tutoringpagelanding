@@ -44,10 +44,7 @@ export const metadata: Metadata = {
       "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online and in-person sessions available.",
     images: ["/unmessd-app-icon.jpg"],
   },
-  icons: {
-    icon: "/unmessd-app-icon.jpg",
-    apple: "/unmessd-app-icon.jpg",
-  },
+  
 }
 
 export default function RootLayout({

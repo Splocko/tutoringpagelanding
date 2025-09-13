@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Menu, X, GraduationCap } from "lucide-react"
+import { Menu, X, BookOpen } from "lucide-react"
+
 import AnimatedShinyText from "@/components/animated-shiny-text" // Import the new component
 
 interface NavigationProps {
@@ -38,6 +39,24 @@ export default function Navigation({
 
   return (
     <>
+      {isBannerVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 text-center py-4 px-4 relative mt-16 z-40"
+        >
+          <AnimatedShinyText className="text-sm font-medium">
+            ✨ Limited time: First taster session free. Contact me
+          </AnimatedShinyText>
+          <button
+            onClick={() => setIsBannerVisible(false)}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-800/80 hover:text-gray-800 dark:text-gray-200/80 dark:hover:text-gray-200"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </motion.div>
+      )}
       <motion.nav
         className={`fixed left-0 right-0 z-50 transition-all duration-300 ease-out ${isScrolled ? "top-2" : "top-0"}`}
       >
@@ -55,7 +74,7 @@ export default function Navigation({
               animate={{ opacity: 1, x: 0 }}
               className="font-bold text-xl font-serif text-primary flex items-center flex-shrink-0"
             >
-              <GraduationCap className="h-8 w-8 mr-2 text-primary" />
+              <BookOpen className="h-8 w-8 mr-2 text-primary" />
               saood tutoring
             </motion.div>
 
@@ -75,7 +94,7 @@ export default function Navigation({
                 onClick={() => setIsModalOpen(true)}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                Book a free chat
+                Book a Free Taster
               </Button>
             </div>
 
@@ -115,7 +134,7 @@ export default function Navigation({
                   }}
                   className="bg-primary hover:bg-primary/90 text-primary-foreground w-fit"
                 >
-                  Book a free chat
+                  Book a Free Taster
                 </Button>
               </div>
             </motion.div>
@@ -123,24 +142,7 @@ export default function Navigation({
         </div>
       </motion.nav>
 
-      {isBannerVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          className="bg-accent text-accent-foreground text-center py-4 px-4 relative mt-16 z-40"
-        >
-          <AnimatedShinyText className="text-sm font-medium">
-            Limited time: First taster session free. Contact me
-          </AnimatedShinyText>
-          <button
-            onClick={() => setIsBannerVisible(false)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-accent-foreground/80 hover:text-accent-foreground"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </motion.div>
-      )}
+      
     </>
   )
 }
