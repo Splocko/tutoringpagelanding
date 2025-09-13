@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X, BookOpen } from "lucide-react"
 
-import AnimatedShinyText from "@/components/animated-shiny-text" // Import the new component
+
 
 interface NavigationProps {
   isModalOpen: boolean
@@ -44,11 +44,11 @@ export default function Navigation({
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 text-center py-4 px-4 relative mt-16 z-40"
+          className="w-full bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 text-center py-4 px-4 fixed top-[64px] z-40"
         >
-          <AnimatedShinyText className="text-sm font-medium">
+          <p className="text-sm font-medium">
             ✨ Limited time: First taster session free. Contact me
-          </AnimatedShinyText>
+          </p>
           <button
             onClick={() => setIsBannerVisible(false)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-800/80 hover:text-gray-800 dark:text-gray-200/80 dark:hover:text-gray-200"
@@ -75,7 +75,7 @@ export default function Navigation({
               className="font-bold text-xl font-serif text-primary flex items-center flex-shrink-0"
             >
               <BookOpen className="h-8 w-8 mr-2 text-primary" />
-              saood tutoring
+              Saood Tutoring
             </motion.div>
 
             {/* Desktop Navigation */}

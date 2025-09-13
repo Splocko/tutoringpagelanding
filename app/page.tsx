@@ -48,7 +48,7 @@ const features = [
   {
     icon: <BookOpen className="h-8 w-8 text-primary" />,
     title: "Comprehensive Coverage",
-    description: "Full curriculum coverage for GCSE Maths, Sciences, Computer Science across all exam boards.",
+    description: "Curriculum coverage for GCSE Maths, Sciences, Computer Science across all exam boards.",
   },
   {
     icon: <BookMarked className="h-8 w-8 text-primary" />,
@@ -86,7 +86,7 @@ export default function SaoodTutoring() {
   const [isBannerVisible, setIsBannerVisible] = useState(true)
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className={`min-h-screen bg-background text-foreground overflow-x-hidden ${isBannerVisible ? 'pt-12' : ''}`}>
       {/* Navigation Component */}
       <Navigation
         isModalOpen={isModalOpen}
@@ -132,6 +132,9 @@ export default function SaoodTutoring() {
               </Badge>
               <Badge variant="secondary" className="px-6 py-3 text-sm">
                 Edexcel
+              </Badge>
+              <Badge variant="secondary" className="px-6 py-3 text-sm">
+                Other Exam Boards
               </Badge>
             </div>
           </motion.div>

@@ -16,22 +16,22 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "saood tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+  title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
   description:
     "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
   generator: "v0.app",
   openGraph: {
-    title: "saood tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+    title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
     description:
       "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
     url: "https://saoodtutoring.com",
-    siteName: "saood tutoring",
+    siteName: "SAOOD TUTORING",
     images: [
       {
         url: "/unmessd-app-icon.jpg",
         width: 1200,
         height: 630,
-        alt: "saood tutoring - GCSE & 11+ Tutoring",
+        alt: "SAOOD TUTORING - GCSE & 11+ Tutoring",
       },
     ],
     locale: "en_US",
@@ -39,12 +39,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "saood tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+    title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
     description:
       "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online and in-person sessions available.",
     images: ["/unmessd-app-icon.jpg"],
   },
-  
+  icons: {
+    icon: "📚", // BookOpen emoji
+  },
 }
 
 export default function RootLayout({

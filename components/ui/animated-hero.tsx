@@ -9,7 +9,7 @@ interface HeroProps {
 function Hero({ setIsModalOpen }: HeroProps) {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["maths", "science", "physics", "biology", "computer science", "11+", "aqa", "edexcel", "other exam boards"],
+    () => ["Maths", "Science", "Physics", "Biology", "Computer Science", "11+", "AQA", "Edexcel", "Other Exam Boards"],
     []
   );
 
@@ -25,9 +25,9 @@ function Hero({ setIsModalOpen }: HeroProps) {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] bg-no-repeat bg-cover bg-center">
       <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
+        <div className="flex gap-8 py-24 lg:py-48 items-center justify-center flex-col">
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               GCSE & 11+ Tutoring
@@ -69,7 +69,7 @@ function Hero({ setIsModalOpen }: HeroProps) {
               onClick={() => setIsModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-xl font-medium rounded-xl soft-glow"
             >
-              Book a Free Taster
+              Contact Me
             </Button>
           </div>
         </div>
