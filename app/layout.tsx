@@ -16,22 +16,22 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "Saood Tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+  title: "GCSE 11+ Tutoring",
   description:
-    "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
+    "Focused, friendly, and effective GCSE and 11+ tutoring.",
   generator: "v0.app",
   openGraph: {
-    title: "Saood Tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+    title: "GCSE 11+ Tutoring",
     description:
-      "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
+      "Focused, friendly, and effective GCSE and 11+ tutoring.",
     url: "https://saoodtutoring.com",
-    siteName: "Saood Tutoring",
+    siteName: "GCSE 11+ Tutoring",
     images: [
       {
-        url: "/unmessd-app-icon.jpg",
+        url: "/book-icon.svg",
         width: 1200,
         height: 630,
-        alt: "Saood Tutoring - GCSE & 11+ Tutoring",
+        alt: "GCSE 11+ Tutoring",
       },
     ],
     locale: "en_US",
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saood Tutoring - GCSE & 11+ Maths, Sciences, Computer Science",
+    title: "GCSE 11+ Tutoring",
     description:
-      "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online and in-person sessions available.",
-    images: ["/unmessd-app-icon.jpg"],
+      "Focused, friendly, and effective GCSE and 11+ tutoring.",
+    images: ["/book-icon.svg"],
   },
   icons: {
     icon: "/book-icon.svg",
