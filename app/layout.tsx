@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     images: ["/unmessd-app-icon.jpg"],
   },
   icons: {
-    icon: "📚", // BookOpen emoji
+    icon: "/placeholder-logo.svg",
   },
 }
 
