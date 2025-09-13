@@ -65,8 +65,8 @@ const features = [
   },
   {
     icon: <Trophy className="h-8 w-8 text-primary" />,
-    title: "Proven Results",
-    description: "Track record of helping students achieve their target grades and beyond.",
+    title: "Effective Methods",
+    description: "Utilizing effective methods and strategies to help you achieve your academic goals.",
   },
   {
     icon: <MapPin className="h-8 w-8 text-primary" />,

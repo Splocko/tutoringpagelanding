@@ -11,7 +11,7 @@ interface HeroProps {
 function Hero({ setIsModalOpen }: HeroProps) {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["Maths", "Science", "Physics", "Biology", "Computer Science", "11+", "AQA", "Edexcel", "Other Exam Boards"],
+    () => ["Maths", "Science", "Physics", "Biology", "Computer Science", "11+", "AQA", "Edexcel", "OCR", "Other Exam Boards"],
     []
   );
 
@@ -39,24 +39,17 @@ function Hero({ setIsModalOpen }: HeroProps) {
         animate={{ scale: 1.08 }}
         transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
       />
-      <div className="relative z-10 flex gap-8 min-h-screen items-center justify-center flex-col text-center px-6 py-16 text-white">
-          {/* Announcement banner: compact inline on mobile, floating on desktop */}
-          <div className="w-full flex justify-center sm:hidden">
-            <AnnouncementBanner
-              message="Limited offer: Free taster session for your child"
-              cta="Contact now"
-              onCtaClick={() => setIsModalOpen(true)}
-              className="max-w-[20rem] text-xs"
-            />
-          </div>
-          <div className="hidden sm:block absolute top-20 sm:top-24 left-1/2 -translate-x-1/2">
-            <AnnouncementBanner
-              message="Limited offer: Free taster session for your child"
-              cta="Contact now"
-              onCtaClick={() => setIsModalOpen(true)}
-            />
-          </div>
+      <div className="relative z-10 flex gap-4 min-h-[100svh] items-center justify-center flex-col text-center px-6 py-16 text-white">
           <div className="flex gap-4 flex-col">
+            {/* Announcement banner placed just above the heading */}
+            <div className="w-full flex justify-center mb-2">
+              <AnnouncementBanner
+                message="Limited offer: Free taster session for your child"
+                cta="Contact now"
+                onCtaClick={() => setIsModalOpen(true)}
+                className="max-w-[22rem] text-xs sm:text-sm"
+              />
+            </div>
             <h1 className="text-5xl md:text-7xl max-w-3xl tracking-tighter font-regular text-black">
               GCSE & 11+ Tutoring
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
