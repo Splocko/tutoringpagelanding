@@ -74,7 +74,7 @@ export default function Navigation({
               animate={{ opacity: 1, x: 0 }}
               className="font-bold text-xl font-serif text-primary flex items-center flex-shrink-0"
             >
-              <BookOpen className="h-8 w-8 mr-2 text-primary" />
+              <img src="/placeholder-logo.svg" alt="Saood Tutoring Logo" className="h-8 w-8 mr-2" />
               Saood Tutoring
             </motion.div>
 
