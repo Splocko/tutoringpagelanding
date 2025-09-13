@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Educational beige/cream color palette with high contrast */
-  --background: oklch(0.98 0.01 85); /* Warm off-white */
-  --foreground: oklch(0.08 0.02 85); /* Very dark brown text for maximum contrast */
-  --card: oklch(0.96 0.01 85); /* Light cream cards */
-  --card-foreground: oklch(0.08 0.02 85);
-  --popover: oklch(0.96 0.01 85);
-  --popover-foreground: oklch(0.08 0.02 85);
-  --primary: oklch(0.15 0.08 85); /* Very dark brown primary for maximum contrast */
+  /* Updated to pure white background and warmer educational colors */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.1 0.02 85); /* Very dark brown text */
+  --card: oklch(0.98 0.01 85); /* Very light cream cards */
+  --card-foreground: oklch(0.1 0.02 85);
+  --popover: oklch(0.98 0.01 85);
+  --popover-foreground: oklch(0.1 0.02 85);
+  --primary: oklch(0.2 0.08 85); /* Dark brown primary */
   --primary-foreground: oklch(0.98 0.01 85); /* Light text on dark primary */
-  --secondary: oklch(0.92 0.02 85); /* Light beige */
-  --secondary-foreground: oklch(0.08 0.02 85); /* Very dark text */
-  --muted: oklch(0.94 0.01 85); /* Muted beige */
-  --muted-foreground: oklch(0.25 0.02 85); /* Dark muted text */
-  --accent: oklch(0.2 0.12 45); /* Very dark orange accent for maximum contrast */
+  --secondary: oklch(0.95 0.02 85); /* Light beige secondary */
+  --secondary-foreground: oklch(0.1 0.02 85);
+  --muted: oklch(0.96 0.01 85); /* Very light muted */
+  --muted-foreground: oklch(0.3 0.02 85); /* Dark muted text */
+  --accent: oklch(0.25 0.12 45); /* Dark orange accent for high contrast */
   --accent-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.02 85); /* Soft beige borders */
-  --input: oklch(0.88 0.02 85);
-  --ring: oklch(0.15 0.08 85);
+  --border: oklch(0.9 0.02 85); /* Light beige borders */
+  --input: oklch(0.9 0.02 85);
+  --ring: oklch(0.2 0.08 85);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -151,7 +151,8 @@
 }
 
 .educational-bg {
-  background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 50%, #f0ebe3 100%);
+  /* Updated to use pure white with subtle warm tint */
+  background: linear-gradient(135deg, #ffffff 0%, #fefcfa 50%, #fdf9f5 100%);
 }
 
 .gentle-float {

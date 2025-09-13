@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X, GraduationCap } from "lucide-react"
+import AnimatedShinyText from "@/components/animated-shiny-text" // Import the new component
 
 interface NavigationProps {
   isModalOpen: boolean
@@ -127,12 +128,14 @@ export default function Navigation({
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="bg-primary text-primary-foreground text-center py-3 px-4 relative mt-16 z-40"
+          className="bg-accent text-accent-foreground text-center py-4 px-4 relative mt-16 z-40"
         >
-          <p className="text-sm font-medium">✨ Limited time: First taster session free. Contact me</p>
+          <AnimatedShinyText className="text-sm font-medium">
+            Limited time: First taster session free. Contact me
+          </AnimatedShinyText>
           <button
             onClick={() => setIsBannerVisible(false)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-primary-foreground/80 hover:text-primary-foreground"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-accent-foreground/80 hover:text-accent-foreground"
           >
             <X className="h-4 w-4" />
           </button>

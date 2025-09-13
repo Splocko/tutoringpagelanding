@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import AnimatedShinyText from "@/components/animated-shiny-text"
 import {
   Calculator,
   Atom,
@@ -107,13 +108,15 @@ export default function SaoodTutoring() {
               <span className="text-primary">Maths, Sciences, Computer Science</span>
             </h1>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans">
                 I'm a tutor who achieved outstanding GCSE grades and I'm here to help you do the same. Focused,
                 friendly, and effective tutoring to help you achieve your target grades. One-to-one and group sessions
                 available online.
               </p>
-              <p className="text-lg font-semibold text-accent">✨ Free taster session available</p>
+              <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 max-w-md mx-auto">
+                <AnimatedShinyText className="text-lg font-semibold">Free taster session available</AnimatedShinyText>
+              </div>
             </div>
 
             <div className="flex justify-center pt-8">
