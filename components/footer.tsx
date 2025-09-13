@@ -16,7 +16,7 @@ export default function Footer() {
           >
             <h3 className="font-bold text-2xl font-serif text-primary">About</h3>
             <p className="text-foreground/70 leading-relaxed">
-              saood tutoring provides focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and
+              Saood Tutoring provides focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and
               Computer Science. Helping students achieve their academic goals with personalized learning approaches.
             </p>
           </motion.div>
