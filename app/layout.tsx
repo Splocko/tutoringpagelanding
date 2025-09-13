@@ -16,22 +16,22 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "unmessd - Find your focus. Organize your world.",
+  title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
   description:
-    "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
+    "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
   generator: "v0.app",
   openGraph: {
-    title: "unmessd - Find your focus. Organize your world.",
+    title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
     description:
-      "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
-    url: "https://unmessd.com",
-    siteName: "unmessd",
+      "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online sessions available.",
+    url: "https://saoodtutoring.com",
+    siteName: "SAOOD TUTORING",
     images: [
       {
         url: "/unmessd-app-icon.jpg",
         width: 1200,
         height: 630,
-        alt: "unmessd - Productivity App",
+        alt: "SAOOD TUTORING - GCSE & 11+ Tutoring",
       },
     ],
     locale: "en_US",
@@ -39,14 +39,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "unmessd - Find your focus. Organize your world.",
+    title: "SAOOD TUTORING - GCSE & 11+ MATHS, SCIENCES, COMPUTER SCIENCE",
     description:
-      "The intelligent productivity app that blends task management, habit formation, and AI-powered assistance into one beautiful, calming experience.",
+      "Focused, friendly, and effective GCSE and 11+ tutoring in Maths, Sciences, and Computer Science. Online and in-person sessions available.",
     images: ["/unmessd-app-icon.jpg"],
   },
   icons: {
-    icon: "/unmessd-app-icon.jpg",
-    apple: "/unmessd-app-icon.jpg",
+    icon: "📚", // BookOpen emoji
   },
 }
 
@@ -56,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable} dark antialiased`}>
+    <html lang="en" className={`${inter.variable} ${manrope.variable} antialiased`}>
       <body>{children}</body>
     </html>
   )
