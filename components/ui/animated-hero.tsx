@@ -1,5 +1,8 @@
+"use client"
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import { MeshGradient } from "@paper-design/shaders-react";
+import { AnnouncementBanner } from "@/components/ui/announcement-banner";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
@@ -25,11 +28,44 @@ function Hero({ setIsModalOpen }: HeroProps) {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] bg-no-repeat bg-cover bg-center">
-      <div className="container mx-auto">
-        <div className="flex gap-8 py-24 lg:py-48 items-center justify-center flex-col">
+    <section
+      id="home"
+      className="relative w-full min-h-screen overflow-hidden"
+    >
+      {/* Reuno UI inspired background using MeshGradient layers */}
+      <div className="absolute inset-0 z-0 bg-black">
+        <MeshGradient
+          className="absolute inset-0 w-full h-full"
+          colors={["#000000", "#06b6d4", "#0891b2", "#164e63", "#f97316"]}
+          speed={0.3}
+        />
+        <MeshGradient
+          className="absolute inset-0 w-full h-full opacity-85"
+          colors={["#000000", "#ffffff", "#06b6d4", "#f97316"]}
+          speed={0.2}
+          // @ts-expect-error - library accepts string "true" for wireframe
+          wireframe="true"
+        />
+      </div>
+      <div className="relative z-10 flex gap-8 min-h-screen items-center justify-center flex-col text-center px-6 py-16 text-white">
+          {/* Announcement banner: compact inline on mobile, floating on desktop */}
+          <div className="w-full flex justify-center sm:hidden">
+            <AnnouncementBanner
+              message="Limited offer: Free taster session for your child"
+              cta="Contact now"
+              onCtaClick={() => setIsModalOpen(true)}
+              className="max-w-[20rem] text-xs"
+            />
+          </div>
+          <div className="hidden sm:block absolute top-20 sm:top-24 left-1/2 -translate-x-1/2">
+            <AnnouncementBanner
+              message="Limited offer: Free taster session for your child"
+              cta="Contact now"
+              onCtaClick={() => setIsModalOpen(true)}
+            />
+          </div>
           <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+            <h1 className="text-5xl md:text-7xl max-w-3xl tracking-tighter font-regular">
               GCSE & 11+ Tutoring
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
@@ -57,7 +93,7 @@ function Hero({ setIsModalOpen }: HeroProps) {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-white/80 max-w-2xl mx-auto">
               I'm a tutor who achieved outstanding GCSE grades and I'm here to help you do the same. Focused,
               friendly, and effective tutoring to help you achieve your target grades. One-to-one and group sessions
               available online.
@@ -73,8 +109,7 @@ function Hero({ setIsModalOpen }: HeroProps) {
             </Button>
           </div>
         </div>
-      </div>
-    </div>
+    </section>
   );
 }
 

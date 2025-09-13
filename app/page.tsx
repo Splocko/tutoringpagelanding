@@ -19,11 +19,14 @@ import {
   Calendar,
   Trophy,
   MapPin,
+  Home,
+  Info,
+  Phone,
 } from "lucide-react"
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import ContactModal from "@/components/contact-modal"
 import { Hero } from "@/components/ui/animated-hero"
+import { NavBar } from "@/components/ui/tubelight-navbar"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -83,21 +86,22 @@ const subjects = [
 
 export default function SaoodTutoring() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isBannerVisible, setIsBannerVisible] = useState(true)
 
   return (
-    <div className={`min-h-screen bg-background text-foreground overflow-x-hidden ${isBannerVisible ? 'pt-12' : ''}`}>
-      {/* Navigation Component */}
-      <Navigation
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-        isBannerVisible={isBannerVisible}
-        setIsBannerVisible={setIsBannerVisible}
+    <div className={`min-h-screen bg-background text-foreground overflow-x-hidden`}>
+      {/* Tubelight Navbar */}
+      <NavBar
+        items={[
+          { name: "Home", url: "#home", icon: Home },
+          { name: "Subjects", url: "#subjects", icon: BookOpen },
+          { name: "About", url: "#about", icon: Info },
+          { name: "Contact", url: "#contact", icon: Phone },
+        ]}
       />
 
             <Hero setIsModalOpen={setIsModalOpen} />
 
-      <section id="subjects" className="py-32 px-6">
+      <section id="subjects" className="py-32 px-6 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -163,7 +167,7 @@ export default function SaoodTutoring() {
         </div>
       </section>
 
-      <section id="about" className="py-32 px-6 bg-card/30">
+      <section id="about" className="py-32 px-6 bg-card/30 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -198,7 +202,7 @@ export default function SaoodTutoring() {
         </div>
       </section>
 
-      <section id="contact" className="py-32 px-6 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+      <section id="contact" className="py-32 px-6 bg-gradient-to-br from-primary/10 via-background to-secondary/10 scroll-mt-24">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -221,6 +225,19 @@ export default function SaoodTutoring() {
               >
                 Book a Free Taster
               </Button>
+            </div>
+            <div className="pt-4 text-center space-y-2">
+              <p className="text-base md:text-lg text-muted-foreground">
+                Or reach me directly:
+              </p>
+              <div className="flex flex-col items-center gap-1">
+                <a href="tel:+447488528958" className="text-lg font-medium hover:underline">
+                  +44 7488 528958
+                </a>
+                <a href="mailto:tutoredbysaood@icloud.com" className="text-lg font-medium hover:underline">
+                  tutoredbysaood@icloud.com
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
